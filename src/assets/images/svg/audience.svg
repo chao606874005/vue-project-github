@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>观众</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-284.000000, -53.000000)" fill="#17D3CF">
+            <path d="M290,61 C293.238397,61 295.877572,63.5655749 295.995862,66.7750617 L296,67 L284,67 C284,63.6862915 286.686292,61 290,61 Z M290,53 C292.209139,53 294,54.790861 294,57 C294,59.209139 292.209139,61 290,61 C287.790861,61 286,59.209139 286,57 C286,54.790861 287.790861,53 290,53 Z" id="观众"></path>
+        </g>
+    </g>
+</svg>

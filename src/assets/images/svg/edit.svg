@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title> 编辑</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-234.000000, -144.000000)">
+            <g id="-编辑" transform="translate(234.000000, 144.000000)">
+                <rect id="矩形" fill="#0771F5" x="0" y="11" width="12" height="1"></rect>
+                <path d="M4.76971894,9.31982422 L10.2065203,3.81084296 L7.30082166,0.709924761 L1.5,6.2412065 L1.5,9.31982422 L4.76971894,9.31982422 Z" id="路径-9" stroke="#0771F5"></path>
+                <rect id="矩形" stroke="#0771F5" transform="translate(6.767767, 3.767767) rotate(-315.000000) translate(-6.767767, -3.767767) " x="5.26776695" y="3.76776695" width="3" height="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

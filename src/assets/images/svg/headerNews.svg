@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>消息</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-457.000000, -52.000000)" fill="#FFFFFF">
+            <path d="M463,54 C465.209139,54 467,55.790861 467,58 L467,58 L467,62 L469,65 L457,65 L459,62 L459,58 L459.004895,57.8003597 C459.108921,55.6839685 460.857805,54 463,54 Z M460,67 L466,67 L466,68 L460,68 L460,67 Z M462,52 L464,52 L464,53 L462,53 L462,52 Z" id="消息"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>手机</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-460.000000, -141.000000)">
+            <g id="手机" transform="translate(460.000000, 141.000000)">
+                <rect id="矩形" fill="#FFFFFF" x="1" y="11" width="10" height="1"></rect>
+                <rect id="矩形-copy-2" fill="#FFFFFF" x="5" y="13" width="2" height="1"></rect>
+                <rect id="矩形" stroke="#FFFFFF" x="0.5" y="0.5" width="11" height="15" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

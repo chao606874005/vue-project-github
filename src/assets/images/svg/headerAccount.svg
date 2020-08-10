@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>账号</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-415.000000, -53.000000)" fill="#FFFFFF">
+            <path d="M421,61 C424.238397,61 426.877572,63.5655749 426.995862,66.7750617 L427,67 L415,67 C415,63.6862915 417.686292,61 421,61 Z M421,53 C423.209139,53 425,54.790861 425,57 C425,59.209139 423.209139,61 421,61 C418.790861,61 417,59.209139 417,57 C417,54.790861 418.790861,53 421,53 Z" id="账号"></path>
+        </g>
+    </g>
+</svg>
