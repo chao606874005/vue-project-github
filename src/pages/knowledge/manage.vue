@@ -3,7 +3,7 @@
     <a-layout>
         <Aside class="aside"></Aside>
         <a-layout-content class="content">
-          <!-- <TitleBar></TitleBar> -->
+          <TitleBar></TitleBar>
           <router-view></router-view>
         </a-layout-content>
     </a-layout>
@@ -11,13 +11,15 @@
 </template>
 
 <script>
-import Aside from '../../components/knowledge/Aside'
 import { mapState, mapMutations } from 'vuex';
+import Aside from '../../components/knowledge/Aside'
+import TitleBar from '../../components/TitleBar'
+
 export default {
   name: 'account',
   components: {
     Aside,
-    // TitleBar
+    TitleBar
   },
    data() {
     return {
@@ -27,9 +29,6 @@ export default {
   computed: {
     ...mapState([
     ]),
-  },
-  created() {
-    // this.changeCurHeaderMenu('account')
   },
   mounted() {
     let that = this
@@ -45,7 +44,7 @@ export default {
   },
   methods: {
     ...mapMutations([
-      // 'changeCurHeaderMenu', 
+      'changeCurHeaderMenu', 
     ]),
   }
 }

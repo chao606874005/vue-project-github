@@ -53,25 +53,6 @@
           <span class="suggest__title">标题</span>
           <a-input class="suggest__input" v-model="suggestParams.title" placeholder="" />
         </p>
-        <p>
-          <span class="suggest__title">问题描述</span>
-          <a-textarea  class="suggest__input" v-model="suggestParams.description" placeholder="" :rows="4" />
-        </p>
-        <p>
-          <span class="suggest__title"></span>
-          <a-upload
-            class="suggest__input"
-            action="http://live.21cn.com/api/v1/video/uploadPic"
-            :multiple="false"
-            :file-list="fileList"
-            accept=".jpg,.png"
-            @change="handleChange"
-          > 
-            <template v-if="fileList.length === 0">
-              <a-icon type="paper-clip" style="color:#2B70FF;margin-right:8px" />添加附件
-            </template>
-          </a-upload>
-        </p>
       </a-modal>
     </a-layout-header>
 </template>
@@ -101,7 +82,7 @@ export default {
         // HeaderPointSvg,
         menulist: [
           { type: 'homepage', name: '首页', path: '/' },
-          { type: 'live', name: 'Vue知识点', path: '/knowledge' },
+          { type: 'knowledge', name: 'Vue知识点', path: '/knowledge' },
         ],
         // 问题建议
         visible: false,
@@ -127,9 +108,12 @@ export default {
   },
   created() {
   },
+  mounted() {
+    console.log('curHeaderMenu=',this.curHeaderMenu)
+  },
   methods: {
     ...mapMutations([
-      // 'changeCurHeaderMenu',
+      'changeCurHeaderMenu',
     ]),
     // 退出
     _logout() {

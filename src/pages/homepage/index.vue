@@ -4,11 +4,22 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   data() {
     return {
       mainListHeight: document.documentElement.clientHeight,
     }
+  },
+  computed: {
+    ...mapState([
+    ]),
+  },
+  created() {
+    // this.$store.state.curHeaderMenu = 'homepage'
+    // this.$store.commit('changeCurHeaderMenu','homepage')
+    this.changeCurHeaderMenu('homepage')
   },
   mounted() {
     let that = this
@@ -21,6 +32,11 @@ export default {
             }, 600)
         }
     }
+  },
+   methods: {
+    ...mapMutations([
+      'changeCurHeaderMenu', 
+    ]),
   }
 };
 </script>

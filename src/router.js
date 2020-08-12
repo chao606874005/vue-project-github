@@ -24,7 +24,13 @@ export default new Router({
           path: '/knowledge/direction',
           name: 'direction',
           component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/direction')
-        }]
+        },
+        {
+          path: '/knowledge/slot',
+          name: 'slot',
+          component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/slot/index')
+        },
+      ]
     }
   ]
 })

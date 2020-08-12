@@ -4,7 +4,7 @@ import qs from 'qs';
 
 // default config
 Object.assign(axios.defaults, {
-    // baseURL: 'http://live.21cn.com',
+    // baseURL: '',
     // timeout: 10000,
     header: {
       'Content-Type': 'application/x-www-form-urlencoded'

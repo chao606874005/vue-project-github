@@ -2,26 +2,18 @@
   <a-layout-sider width="228px" class="sider">
     <a-menu
       style="width: 228px"
-      :default-selected-keys="['1']"
       :open-keys.sync="openKeys"
+      :selectedKeys="[$route.name]"
       mode="inline"
       @click="handleClick"
     >
       <a-sub-menu key="sub1" @titleClick="titleClick">
         <span slot="title"><a-icon type="appstore" /><span>Vue语法</span></span>
-        <a-menu-item key="1">
-          知识点
-        </a-menu-item>
-        <a-menu-item key="2">
-          Option 2
-        </a-menu-item>
-        <a-sub-menu key="sub3" title="Submenu">
-          <a-menu-item key="3">
-            Option 3
-          </a-menu-item>
-          <a-menu-item key="4">
-            Option 4
-          </a-menu-item>
+        <a-sub-menu key="sub3" title="指令">
+          <a-menu-item key="direction" @click="routerSkip('direction')">指令1</a-menu-item>
+        </a-sub-menu>
+        <a-sub-menu key="sub4" title="插槽">
+          <a-menu-item key="slot" @click="routerSkip('slot')">插槽1</a-menu-item>
         </a-sub-menu>
       </a-sub-menu>
       <a-sub-menu key="sub2" @titleClick="titleClick">
@@ -45,6 +37,8 @@
   </a-layout-sider>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   data() {
     return {
@@ -57,7 +51,22 @@ export default {
       console.log('openKeys', val);
     },
   },
+  created() {
+    this.changeCurHeaderMenu('knowledge')
+  },
+  computed: {
+    ...mapState([
+    ]),
+  },
   methods: {
+    ...mapMutations([
+      'changeCurHeaderMenu',
+    ]),
+    // 路由跳转
+    routerSkip(path) {
+      if(this.$route.name === path) return
+      this.$router.push({ path: '/knowledge/'+path })
+    },
     handleClick(e) {
       console.log('click', e);
     },
