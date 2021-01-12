@@ -10,6 +10,9 @@ export default new Router({
       path: '/',
       name: 'homepage',
       component: () => import(/* webpackChunkName: "homepage" */ './pages/homepage'),
+      meta: {
+        belong: 'homepage'
+      }
     },
     /* 知识点 */
     {
@@ -23,13 +26,38 @@ export default new Router({
         {
           path: '/knowledge/direction',
           name: 'direction',
-          component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/direction')
+          component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/direction'),
+          meta: {
+            belong: 'knowledge'
+          }
         },
         {
           path: '/knowledge/slot',
           name: 'slot',
-          component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/slot/index')
+          component: () => import(/* webpackChunkName: "direction" */ './pages/knowledge/slot/index'),
+          meta: {
+            belong: 'knowledge'
+          }
+        }
+      ]
+    },
+    /* 前端知识点 */
+    {
+      path: '/front',
+      component: () => import(/* webpackChunkName: "front" */ './pages/front/manage'),
+      children: [
+        {
+          path: '',
+          redirect: 'es6'
         },
+        {
+          path: '/front/es6',
+          name: 'es6',
+          component: () => import(/* webpackChunkName: "es6" */ './pages/knowledge/direction'),
+          meta: {
+            belong: 'front'
+          }
+        }
       ]
     }
   ]

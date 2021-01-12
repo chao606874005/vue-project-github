@@ -7,7 +7,7 @@
         v-for="(item, i) of menulist" :key="i">
           <router-link class="menuitem__link" :to="item.path">
             <span class="menuitem__link-name">{{ item.name }}</span>
-            <span v-if="item.type === curHeaderMenu" class="menuitem__link-line"></span>
+            <span v-if="item.type === curMenu" class="menuitem__link-line"></span>
             </router-link>
         </li>
       </ul>
@@ -32,17 +32,11 @@
                 <router-link to="/account">账号中心</router-link>
                 <a @click="showModal" href="javascript:;">问题建议</a>
               </ul>
-              
               <!-- 退出 -->
               <div class="account__logout" @click="_logout">退出</div>
             </div>
           </div>
         </div>
-        <!-- 消息中心 -->
-        <router-link class="enter__item" to="/news">
-            <HeaderNewsSvg />
-            <span v-if="curUserInfo.unreadMsgCount" class="enter__item-notice"></span>
-        </router-link>
     </div>
 
       <!-- 问题建议弹框 -->
@@ -62,7 +56,6 @@ import { mapState, mapMutations } from 'vuex';
 // import { logout, addquestion } from '../service'
 import LogoSvg from '../assets/images/svg/logo.svg';
 import HeaderAccountSvg from '../assets/images/svg/headerAccount.svg';
-import HeaderNewsSvg from '../assets/images/svg/headerNews.svg';
 
 export default {
   name: 'Header',
@@ -73,16 +66,14 @@ export default {
   },
   components: {
     LogoSvg,
-    HeaderNewsSvg,
     HeaderAccountSvg
   },
   data () {
       return {
-        // HeaderLiveSvg,
-        // HeaderPointSvg,
         menulist: [
           { type: 'homepage', name: '首页', path: '/' },
           { type: 'knowledge', name: 'Vue知识点', path: '/knowledge' },
+          { type: 'front', name: '前端知识点', path: '/front' },
         ],
         // 问题建议
         visible: false,
@@ -97,23 +88,21 @@ export default {
         fileList: [],
       }
   },
+  watch: {
+    '$route': function(to, from) {
+      this.curMenu = to.meta.belong
+    }
+  },
   computed: {
     ...mapState([
-      'curHeaderMenu',
       'curUserInfo'
     ]),
     uploadEmpty() {
       return !(this.suggestParams.title && this.suggestParams.description)
     }
   },
-  created() {
-  },
-  mounted() {
-    console.log('curHeaderMenu=',this.curHeaderMenu)
-  },
   methods: {
     ...mapMutations([
-      'changeCurHeaderMenu',
     ]),
     // 退出
     _logout() {
